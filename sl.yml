@@ -1,0 +1,11 @@
+- name: SL install
+  hosts: all
+  tasks:
+    - name: epel install
+      yum:
+        name: epel-release
+
+    - name: SL install
+      yum:
+        name: sl
+        enablerepo: epel
